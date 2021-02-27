@@ -7,71 +7,56 @@ use Psr\Http\Message\StreamInterface;
 class Stream implements StreamInterface
 {
 
+    /**
+     * @var string
+     */
+    private $content;
+
+    public function __construct(string $content)
+    {
+        $this->content = $content;
+    }
+
     public function __toString()
     {
-
+        return $this->getContents();
     }
 
-    public function close()
+
+    public function getContents(): string
     {
-
-    }
-
-    public function detach()
-    {
-    }
-
-    public function getSize()
-    {
-
-    }
-
-    public function tell()
-    {
-    }
-
-    public function eof()
-    {
-
-    }
-
-    public function isSeekable()
-    {
-
-    }
-
-    public function seek($offset, $whence = SEEK_SET)
-    {
-
-    }
-
-    public function rewind()
-    {
-
-    }
-
-    public function isWritable()
-    {
-
+        return $this->content;
     }
 
     public function write($string)
     {
+        $this->content .= $string;
     }
 
-    public function isReadable()
+    public function getSize()
     {
+        return mb_strlen($this->content);
     }
 
-    public function read($length)
-    {
-    }
+    public function close() {}
 
-    public function getContents()
-    {
-    }
+    public function detach() {}
 
-    public function getMetadata($key = null)
-    {
-    }
+    public function tell() {}
+
+    public function eof() {}
+
+    public function isSeekable() {}
+
+    public function seek($offset, $whence = SEEK_SET) {}
+
+    public function rewind() {}
+
+    public function isWritable() {}
+
+    public function isReadable() {}
+
+    public function read($length) {}
+
+    public function getMetadata($key = null){}
 }
