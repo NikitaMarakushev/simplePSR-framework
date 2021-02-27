@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb8895ba-223e-4ca8-aaca-3fee8cb0c3b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Framework/Http/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Framework/Http/RequestFactoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Framework/Http/ResponseTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Http/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Http/RequestFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Http/RequestFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Framework/Http/RequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Framework/Http/RequestTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614423994007</updated>
-      <workItem from="1614424002245" duration="6039000" />
+      <workItem from="1614424002245" duration="9139000" />
     </task>
     <servers />
   </component>
@@ -89,13 +96,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="160" key="NewPhpClassDialog" timestamp="1614433853198">
+    <state x="522" y="381" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1614435132210">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="465" y="160" key="NewPhpClassDialog/0.40.1536.824@0.40.1536.824" timestamp="1614433853198" />
-    <state x="608" y="372" key="NewPhpFileDialog" timestamp="1614429396259">
+    <state x="522" y="381" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.40.1536.824@0.40.1536.824" timestamp="1614435132210" />
+    <state x="465" y="160" key="NewPhpClassDialog" timestamp="1614434984764">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="608" y="372" key="NewPhpFileDialog/0.40.1536.824@0.40.1536.824" timestamp="1614429396259" />
+    <state x="465" y="160" key="NewPhpClassDialog/0.40.1536.824@0.40.1536.824" timestamp="1614434984764" />
+    <state x="608" y="372" key="NewPhpFileDialog" timestamp="1614434969874">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="608" y="372" key="NewPhpFileDialog/0.40.1536.824@0.40.1536.824" timestamp="1614434969874" />
   </component>
 </project>
