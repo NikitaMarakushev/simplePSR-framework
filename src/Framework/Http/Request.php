@@ -18,8 +18,18 @@ class Request
         return $this->queryParams;
     }
 
+    public function withQueryParams(array $query)
+    {
+        $this->queryParams = $query;
+    }
+
     public function getParsedBody()
     {
         return $this->parsedBody;
+    }
+
+    public function withParsedBody($data)
+    {
+        $this->parsedBody = $data;
     }
 }

@@ -8,7 +8,8 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
