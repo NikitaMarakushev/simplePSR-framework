@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="./vendor/autoload.php"
+         colors="true"
+         convertErrorsToException="true"
+         convertNotificationsToException="true"
+         convertWarningsToException="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuites name="test suite">
+            <directory>./tests</directory>
+        </testsuites>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./framework/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
