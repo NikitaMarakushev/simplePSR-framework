@@ -1,17 +1,23 @@
 <?php /** @noinspection PhpParamsInspection */
 
-namespace tests\Framework\Http;
+namespace Tests\Framework\Http;
 
 use Framework\Http\Request;
 use PHPUnit\Framework\TestCase;
 
 class RequestTest extends TestCase {
 
-    protected function testEmpty(): void
+    protected function setUp(): void
     {
+        parent::setUp();
+
         $_GET = [];
         $_POST = [];
 
+    }
+
+    protected function testEmpty(): void
+    {
         $request = new Request();
 
         self::assertEquals([], $request->getQueryParams());
@@ -24,22 +30,20 @@ class RequestTest extends TestCase {
             'name' => 'John',
             'age' => 20,
         ];
-        $_POST = [];
 
         $request = new Request();
 
         self::assertEquals($data, $request->getQueryParams());
-        self::assertNull($data, $request->getParsedBody());
+        self::assertNull($request, $request->getParsedBody());
     }
 
     public function testParsedBody(): void
     {
-        $_GET = [];
         $_POST = $data = ['title' => 'Title'];
 
         $request = new Request();
 
         self::assertEquals([], $request->getQueryParams());
-        self::assertNull($data, $request->getParsedBody());
+        self::assertEquals($data, $request->getParsedBody());
     }
 }
