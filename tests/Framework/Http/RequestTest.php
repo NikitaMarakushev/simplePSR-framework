@@ -18,26 +18,17 @@ class RequestTest extends TestCase {
     protected function testQueryParams(): void
     {
 
-        $request1 = new Request([
+        $request = new Request($data = [
             'name' => 'John',
             'age' => 20,
         ]);
 
-        $request2 = new Request([
-            'name' => 'Jackob',
-            'age' => '100'
-        ]);
-
-        self::assertEquals($data, $request1->getQueryParams());
-        self::assertEquals($data, $request2->getQueryParams());
-        self::assertNull($request1, $request1->getParsedBody());
-        self::assertNull($request2, $request2->getParsedBody());
+        self::assertEquals($data, $request->getQueryParams());
+        self::assertNull($request, $request->getParsedBody());
     }
 
     public function testParsedBody(): void
     {
-        $_POST = $data = ['title' => 'Title'];
-
         $request = new Request([], $data = ['title' => 'Title']);
 
         self::assertEquals([], $request->getQueryParams());
