@@ -12,27 +12,44 @@ class Stream implements StreamInterface
      */
     private $content;
 
+    /**
+     * Stream constructor.
+     * @param string $content
+     */
     public function __construct(string $content)
     {
         $this->content = $content;
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return $this->getContents();
     }
 
 
+    /**
+     * @return string
+     */
     public function getContents(): string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $string
+     * @return int|void
+     */
     public function write($string)
     {
         $this->content .= $string;
     }
 
+    /**
+     * @return int|null
+     */
     public function getSize()
     {
         return mb_strlen($this->content);
