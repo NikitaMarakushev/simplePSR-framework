@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb8895ba-223e-4ca8-aaca-3fee8cb0c3b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PSRFramework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PSRFramework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Http/ResponseSender.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Framework/Http/RequestFactoryTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Framework/Http/RequestTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Framework/Http/ResponseTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614423994007</updated>
       <workItem from="1614424002245" duration="11226000" />
-      <workItem from="1614503451463" duration="3544000" />
+      <workItem from="1614503451463" duration="4119000" />
     </task>
     <servers />
   </component>
