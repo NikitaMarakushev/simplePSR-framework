@@ -26,29 +26,27 @@ if ($path === '/') {
 } elseif ($path === '/about') {
 
     $action = function (ServerRequestInterface $request) {
-        $response = new HtmlResponse('Simple page');
+        $name = $request->getQueryParams()['name'] ?? 'Guest';
+        return new HtmlResponse('Hello' . $name);
     };
 
-} elseif ($path === '/blog') {
-
-    $action = function (ServerRequestInterface $request) {
+}
+elseif ($path === '/blog') {
         $response = new JsonResponse([
             ['id' => 2, 'title' => 'Second page'],
             ['id' => 1, 'title' => 'First page']
         ]);
-    };
-
-} elseif (preg_match('#^/blog/(?P<id>\d+)$#i', $path, $matches)) {
+}
+elseif (preg_match('#^/blog/(?P<id>\d+)$#i', $path, $matches)) {
 
     $request = $request->withAttribute('id', $matches['id']);
 
     $action = function (ServerRequestInterface $request) {
         $id = $request->getAttribute('id');
         if ($id > 2) {
-            $response = new JsonResponse(['error' => 'Undefined page'], 404);
-        } else {
-            $response = new JsonResponse(['id' => $id, 'title' => 'Post'.$id]);
+            return new JsonResponse(['error' => 'Undefined page'], 404);
         }
+        return new JsonResponse(['id' => $id, 'title' => 'Post: '.$id]);
     };
 }
 
