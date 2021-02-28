@@ -25,7 +25,7 @@ class Result
     {
         return $this->handler;
     }
-    
+
     public function getAttributes(): array
     {
         return $this->attributes;
