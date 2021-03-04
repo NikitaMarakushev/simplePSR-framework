@@ -30,9 +30,18 @@ class Router
                 continue;
             }
 
-            //...
+            $pattern = preg_replace_callback('~\{([^\}]+)\}~', function ($matches) use ($route) {
+                $arguments = $matches[1];
+                $replace = $route->tokens[$arguments] ?? '[^}]+';
+                return '(?P<' . $arguments . '>' . $replace . ')';
+            }, $route->pattern);
+
             if (preg_match($pattern, $request->getUri(), $matches)) {
-                return  new Result($name, $handler, $attributes);
+                return  new Result(
+                    $route->name,
+                    $route->handler,
+                    array_filter($matches, '\is_string', ARRAY_FILTER_USE_KEY)
+                );
             }
         }
         throw new RequestNotMatchedException($request);
