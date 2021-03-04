@@ -10,6 +10,14 @@ class Route
     public $tokens;
     public $methods;
 
+    /**
+     * Route constructor.
+     * @param $name
+     * @param $pattern
+     * @param $handler
+     * @param array $methods
+     * @param array $tokens
+     */
     public function __construct($name, $pattern, $handler, array $methods, array $tokens = [])
     {
         $this->name = $name;
