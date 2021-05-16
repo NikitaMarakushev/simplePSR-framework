@@ -52,6 +52,7 @@ class Router
      * @param $url
      * @param array $params
      * @return string
+     * @throws RouteNotFoundException
      */
     public function generate($name, $url, array $params = []): string
     {
