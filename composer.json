@@ -17,7 +17,9 @@
         "symfony/orm-pack": "^2.1",
         "symfony/routing": "^5.2",
         "symfony/config": "^5.2",
-        "symfony/console": "^5.2"
+        "symfony/console": "^5.2",
+        "pimple/pimple": "^3.0",
+        "klein/klein": "^2.1"
     },
     "autoload": {
         "psr-4": {

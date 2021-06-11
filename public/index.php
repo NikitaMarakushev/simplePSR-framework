@@ -4,8 +4,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-die(php_info());
-
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
 use Zend\HttpHandlerRunner\Emitter\SapiEmitter;
@@ -21,7 +19,7 @@ $request = ServerRequestFactory::fromGlobals();
 //Action
 $path = $request->getUri()->getPath();
 $action = null;
-
+    
 if ($path === '/') {
 
     $action = function (ServerRequestInterface $request) {
