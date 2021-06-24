@@ -2,10 +2,15 @@
 
 namespace App\Http\Action;
 
-class ShowAction
-{
-    public function show()
-    {
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 
+class ShowAction extends AbstractController
+{
+    public function show(): Response
+    {
+        return $this->render('', [
+
+        ]);
     }
 }
